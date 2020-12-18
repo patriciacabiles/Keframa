@@ -4,6 +4,12 @@ A landing page for the London - Amsterdam 2021 Bike Ride for the Keframa School 
 
 #
 
+## Where to go:
+
+Currently a Web App, so go to web :)
+
+#
+
 ## To Dos:
 
 [ ] Welcome Page
