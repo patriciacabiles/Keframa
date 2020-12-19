@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/pages/landing_page.dart';
 import 'package:keframa/shared/app_bar.dart';
+import 'package:keframa/shared/divider.dart';
+import 'package:keframa/shared/dummy.dart';
 import 'package:keframa/shared/style.dart';
 
 class TeamPage extends StatefulWidget {
@@ -24,12 +26,16 @@ class _TeamPageState extends State<TeamPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(10, 0, 120, 0),
-                      child: Text('Meet the Team', style: headerStyle),
-                    ),
-                  ]),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10, 0, 120, 0),
+                        child: Text('Meet the Team', style: headerStyle),
+                      ),
+                    ],
+                  ),
+                  CustomDivider(),
                   SizedBox(height: 20),
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Container(
@@ -92,8 +98,3 @@ class PersonInfo extends StatelessWidget {
     );
   }
 }
-
-final dummy3Sentences = Text(
-  "Risus, egestas odio egestas sit enim diam tristique a tellus. Faucibus venenatis, lectus quisque massa dapibus at rhoncus",
-  style: textBodyStyle,
-);

@@ -7,7 +7,7 @@ final headerStyle = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
-final subheadingStyle = TextStyle(
+final subheadingLightBlueStyle = TextStyle(
   color: Colors.lightBlue[700],
   fontFamily: 'Overpass',
   fontSize: 25,

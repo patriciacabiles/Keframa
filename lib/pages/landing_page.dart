@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/shared/app_bar.dart';
 import 'package:keframa/shared/buttons.dart';
+import 'package:keframa/shared/dummy.dart';
 import 'package:keframa/shared/style.dart';
 
 class LandingPage extends StatelessWidget {
@@ -26,7 +27,7 @@ class LandingPage extends StatelessWidget {
                   SizedBox(height: 5),
                   Text(
                     "London to Amsterdam 2021",
-                    style: subheadingStyle,
+                    style: subheadingLightBlueStyle,
                   ),
                   SizedBox(height: 20),
                   SizedBox(
@@ -72,22 +73,5 @@ final mainIntro = Text(
 
 final info = Text(
   "A dedicated team of 56 cyclists are travelling 325 miles over 5 days in aid of the Keframa School Build. By supporting our cause, you have given a young adult in Northern Uganda a chance to thrive.",
-  style: textBodyStyle,
-);
-
-final dummy5SentencesEnd = Text(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue magna consequat mattis netus. Dui mi tortor elementum odio odio congue elementum nunc. Mi, est urna vulputate faucibus eu. Id lectus nisl ultrices purus.",
-  textAlign: TextAlign.end,
-  style: textBodyStyle2,
-);
-
-final dummy5SentencesStart = Text(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue magna consequat mattis netus. Dui mi tortor elementum odio odio congue elementum nunc. Mi, est urna vulputate faucibus eu. Id lectus nisl ultrices purus.",
-  textAlign: TextAlign.start,
-  style: textBodyStyle2,
-);
-
-final dummy10Sentences = Text(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus id lorem quis nisl et quam. Sollicitudin quisque faucibus aenean magnis massa adipiscing euismod. Dignissim sem nulla vestibulum sed phasellus nec. Tortor egestas in consectetur egestas erat molestie tellus. Sit phasellus vitae sed tempus nulla fermentum senectus. Odio laoreet diam, purus neque enim, elit, faucibus. Tellus id pretium sem netus donec. Risus, egestas odio egestas sit enim diam tristique a tellus. Faucibus venenatis, lectus quisque massa dapibus at rhoncus.",
   style: textBodyStyle,
 );
