@@ -12,6 +12,8 @@ Currently a Web App, so go to web :)
 
 ## To Dos:
 
+[x] Boilerplate of pages below!
+
 [ ] Welcome Page
 
 [ ] API?
@@ -20,6 +22,6 @@ Currently a Web App, so go to web :)
 
 [ ] Contact Page
 
-[ ] Donate Button
+[ ] Donate/Support Button
 
 [ ] About Page
