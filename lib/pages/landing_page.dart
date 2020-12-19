@@ -53,7 +53,7 @@ class LandingPage extends StatelessWidget {
                   SizedBox(height: 40),
                   SizedBox(
                     width: 320,
-                    child: dummy5Sentences,
+                    child: dummy5SentencesEnd,
                   )
                 ],
               ),
@@ -75,9 +75,15 @@ final info = Text(
   style: textBodyStyle,
 );
 
-final dummy5Sentences = Text(
+final dummy5SentencesEnd = Text(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue magna consequat mattis netus. Dui mi tortor elementum odio odio congue elementum nunc. Mi, est urna vulputate faucibus eu. Id lectus nisl ultrices purus.",
   textAlign: TextAlign.end,
+  style: textBodyStyle2,
+);
+
+final dummy5SentencesStart = Text(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue magna consequat mattis netus. Dui mi tortor elementum odio odio congue elementum nunc. Mi, est urna vulputate faucibus eu. Id lectus nisl ultrices purus.",
+  textAlign: TextAlign.start,
   style: textBodyStyle2,
 );
 

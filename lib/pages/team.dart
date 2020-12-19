@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:keframa/pages/landing_page.dart';
 import 'package:keframa/shared/app_bar.dart';
 import 'package:keframa/shared/style.dart';
 
@@ -16,23 +17,41 @@ class _TeamPageState extends State<TeamPage> {
         appBar: AppBar(),
       ),
       body: Center(
-        child: Row(
+        child: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(120, 70, 300, 0),
+              padding: EdgeInsets.fromLTRB(120, 70, 120, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    'Team',
-                    style: headerStyle,
-                  ),
+                  Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(10, 0, 120, 0),
+                      child: Text('Meet the Team', style: headerStyle),
+                    ),
+                  ]),
+                  SizedBox(height: 20),
+                  Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Container(
+                        padding: EdgeInsets.fromLTRB(10, 0, 120, 0),
+                        child:
+                            SizedBox(width: 500, child: dummy5SentencesStart)),
+                  ]),
+                  SizedBox(height: 70),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Image.asset('assets/dummyPerson.jpg'),
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      PersonInfo(
+                        name: 'John Smith',
+                        picturePath: 'assets/dummyPerson.jpg',
+                      ),
+                      PersonInfo(
+                        name: 'Jane Smith',
+                        picturePath: 'assets/dummyPerson.jpg',
+                      ),
+                      PersonInfo(
+                        name: 'Chris Hoy',
+                        picturePath: 'assets/dummyPerson.jpg',
                       ),
                     ],
                   )
@@ -45,3 +64,36 @@ class _TeamPageState extends State<TeamPage> {
     );
   }
 }
+
+class PersonInfo extends StatelessWidget {
+  final String name;
+  final String picturePath;
+
+  const PersonInfo({Key key, this.name, this.picturePath}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(
+          width: 200,
+          height: 200,
+          child: Image.asset(picturePath),
+        ),
+        SizedBox(height: 50),
+        Text(
+          name,
+          style: textBodyStyle,
+        ),
+        SizedBox(height: 20),
+        SizedBox(width: 300, child: dummy3Sentences)
+      ],
+    );
+  }
+}
+
+final dummy3Sentences = Text(
+  "Risus, egestas odio egestas sit enim diam tristique a tellus. Faucibus venenatis, lectus quisque massa dapibus at rhoncus",
+  style: textBodyStyle,
+);
