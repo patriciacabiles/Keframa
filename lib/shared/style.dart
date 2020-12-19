@@ -20,3 +20,10 @@ final textBodyStyle = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w200,
 );
+
+final textBodyStyle2 = TextStyle(
+  color: Colors.black54,
+  fontFamily: 'Overpass',
+  fontSize: 13,
+  fontWeight: FontWeight.w200,
+);

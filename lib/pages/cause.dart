@@ -11,6 +11,7 @@ class _CausePageState extends State<CausePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
       appBar: MainAppBar(
         appBar: AppBar(),
       ),

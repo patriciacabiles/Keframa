@@ -11,6 +11,7 @@ class _TeamPageState extends State<TeamPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
       appBar: MainAppBar(
         appBar: AppBar(),
       ),
@@ -25,6 +26,15 @@ class _TeamPageState extends State<TeamPage> {
                   Text(
                     'Team',
                     style: headerStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Image.asset('assets/dummyPerson.jpg'),
+                      ),
+                    ],
                   )
                 ],
               ),

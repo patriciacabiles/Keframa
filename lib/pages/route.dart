@@ -11,6 +11,7 @@ class _RoutePageState extends State<RoutePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
       appBar: MainAppBar(
         appBar: AppBar(),
       ),
