@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white70,
       appBar: AppBar(
-        backgroundColor: Colors.blue[800],
+        backgroundColor: Colors.blue[80],
         elevation: 2.0,
         title: Text('Welcome to the London to Amsterdam Bike Ride 2021'),
         actions: <Widget>[
