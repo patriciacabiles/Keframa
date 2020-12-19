@@ -18,5 +18,5 @@ final textBodyStyle = TextStyle(
   color: Colors.black87,
   fontFamily: 'Overpass',
   fontSize: 15,
-  // fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w200,
 );
