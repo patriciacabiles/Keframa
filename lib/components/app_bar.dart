@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/components/buttons.dart';
-import 'package:keframa/theme/style.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AppBar appBar;
@@ -13,27 +12,9 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: IconThemeData(color: Colors.white, size: 2),
       backgroundColor: Colors.white,
       elevation: 1.0,
-      title: Text(
-        'London2Amsterdam',
-        style: mainTitle,
-      ),
-      // title: Row(
-      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //   children: [
-      //     TextOnlyButton(
-      //       label: 'The Route',
-      //       route: '/route',
-      //     ),
-      //     TextOnlyButton(
-      //       label: 'The Cause',
-      //       route: '/cause',
-      //     ),
-      //     TextOnlyButton(
-      //       label: 'The Team',
-      //       route: '/team',
-      //     ),
-      //   ],
-      // ),
+      title: Container(
+          padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+          child: TitleButton(label: 'London2Amsterdam', route: '/')),
       actions: <Widget>[
         TextOnlyButton(
           label: 'The Route',
