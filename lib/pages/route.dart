@@ -20,7 +20,7 @@ class _RoutePageState extends State<RoutePage> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(120, 70, 120, 0),
+              padding: EdgeInsets.fromLTRB(120, 0, 120, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
