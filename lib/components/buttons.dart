@@ -39,6 +39,24 @@ class SimpleTextOnlyButton extends StatelessWidget {
   }
 }
 
+class TitleButton extends StatelessWidget {
+  final String label;
+  final String route;
+
+  const TitleButton({Key key, this.label, this.route}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      child: Text(label, style: mainTitle),
+      hoverColor: Colors.white70,
+      onPressed: () {
+        Navigator.pushNamed(context, route);
+      },
+    );
+  }
+}
+
 class BoxedButton extends StatelessWidget {
   final String label;
 
