@@ -63,20 +63,6 @@ class LandingPage extends StatelessWidget {
                 )
               ],
             ),
-            // TODO: Fix this...
-            Container(
-              color: Colors.red[50],
-              width: 930,
-              padding: EdgeInsets.only(right: 40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Expanded(
-                    child: dummy10Sentences,
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),
