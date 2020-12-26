@@ -14,14 +14,16 @@ Currently a Web App, so go to web :)
 
 [x] Boilerplate of pages below!
 
-[ ] Welcome Page
+[x] Welcome/landing Page
 
 [ ] API?
 
 [ ] Geolocation Map
 
-[ ] Contact Page
+[x] Sign In page for admins
+
+[ ] User driven addition of photos/location
 
 [ ] Donate/Support Button
 
-[ ] About Page
+[ ] About/Contact Page
