@@ -4,9 +4,11 @@ A landing page for the London - Amsterdam 2021 Bike Ride for the Keframa School 
 
 #
 
-## Where to go:
+## What you need:
 
-Currently a Web App, so go to web :)
+Currently running as a Web App so using Flutter beta, for web. 
+
+` flutter run -d Chrome ` or  `flutter run`, then pick your chosen web server
 
 #
 
