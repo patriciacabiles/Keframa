@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/theme/style.dart';
 
+// ignore: todo
+// TODO: Should Appbar buttons be as below?
+// Navigator.pushNamedAndRemoveUntil(routename, () => false);
+
 class TextOnlyButton extends StatelessWidget {
   final String label;
   final String route;
@@ -14,7 +18,7 @@ class TextOnlyButton extends StatelessWidget {
       hoverColor: Colors.lightBlue[50],
       splashColor: Colors.orangeAccent[700],
       onPressed: () {
-        Navigator.pushNamed(context, route);
+        Navigator.pushReplacementNamed(context, route);
       },
     );
   }
@@ -51,7 +55,7 @@ class TitleButton extends StatelessWidget {
       child: Text(label, style: mainTitle),
       hoverColor: Colors.white70,
       onPressed: () {
-        Navigator.pushNamed(context, route);
+        Navigator.pushReplacementNamed(context, route);
       },
     );
   }
