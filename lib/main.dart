@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:keframa/pages/landing_page.dart';
-import 'package:keframa/pages/route.dart';
-import 'package:keframa/pages/team.dart';
+import 'package:keframa/screens/auth/sign_in.dart';
+import 'package:keframa/screens/cause/cause.dart';
+import 'package:keframa/screens/home/landing_page.dart';
+import 'package:keframa/screens/login/Login.dart';
+import 'package:keframa/screens/route/route.dart';
+import 'package:keframa/screens/team/team.dart';
 import 'package:keframa/services/auth.dart';
 import 'package:keframa/wrapper.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +16,9 @@ void main() {
     routes: {
       '/': (context) => LandingPage(),
       '/route': (context) => RoutePage(),
+      '/cause': (context) => CausePage(),
       '/team': (context) => TeamPage(),
+      '/login': (context) => Login(),
     },
   ));
 }

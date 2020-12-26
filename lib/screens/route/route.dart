@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/components/app_bar.dart';
 import 'package:keframa/components/divider.dart';
-import 'package:keframa/components/style.dart';
+import 'package:keframa/theme/style.dart';
 
 class RoutePage extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:keframa/components/style.dart';
+import 'package:keframa/theme/style.dart';
 
 final dummy5SentencesEnd = Text(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue magna consequat mattis netus. Dui mi tortor elementum odio odio congue elementum nunc. Mi, est urna vulputate faucibus eu. Id lectus nisl ultrices purus.",

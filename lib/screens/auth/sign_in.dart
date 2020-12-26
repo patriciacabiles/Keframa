@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:keframa/components/buttons.dart';
+import 'package:keframa/theme/style.dart';
 import 'package:keframa/services/auth.dart';
 import 'package:keframa/components/loading.dart';
 
@@ -28,9 +30,13 @@ class _LoginState extends State<Login> {
         : Scaffold(
             backgroundColor: Colors.white70,
             appBar: AppBar(
-              backgroundColor: Colors.blue[800],
+              iconTheme: IconThemeData(color: Colors.black87),
+              backgroundColor: Colors.white,
               elevation: 2.0,
-              title: Text('Keframa School Build: London to Amsterdam 2021'),
+              title: Text(
+                'Keframa School Build: London to Amsterdam 2021',
+                style: appBarTextStyle,
+              ),
             ),
             body: Container(
               // TODO: put this in a row .. use better layout!!
@@ -42,7 +48,7 @@ class _LoginState extends State<Login> {
                     Center(
                       child: Text(
                         'Log in',
-                        style: TextStyle(fontSize: 30),
+                        style: headerStyle,
                       ),
                     ),
                     SizedBox(height: 20.0),
@@ -77,10 +83,12 @@ class _LoginState extends State<Login> {
                             TextStyle(color: Colors.red[800], fontSize: 14.0)),
                     SizedBox(height: 15.0),
                     RaisedButton(
-                      color: Colors.blue[700],
+                      color: Colors.lightBlue[700],
                       child: Text(
                         'Log In',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                       ),
                       onPressed: () async {
                         // returns true if BOTH the validators in the email and password return true, otherwise false
@@ -95,7 +103,6 @@ class _LoginState extends State<Login> {
                               loading = false;
                             });
                           }
-                          ;
                         }
                       },
                     ),

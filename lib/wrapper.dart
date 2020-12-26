@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:keframa/models/user.dart';
-// import 'package:keframa/pages/auth/authenticate.dart';
-// import 'package:keframa/pages/home/home.dart';
-import 'package:keframa/pages/landing_page.dart';
+// import 'package:keframa/screens/auth/authenticate.dart';
+// import 'package:keframa/screens/home/home.dart';
+import 'package:keframa/screens/home/landing_page.dart';
 // import 'package:provider/provider.dart';
 
 class Wrapper extends StatelessWidget {

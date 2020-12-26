@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:keframa/components/app_bar.dart';
-import 'package:keframa/components/style.dart';
+import 'package:keframa/theme/style.dart';
 
 class CausePage extends StatefulWidget {
   @override
