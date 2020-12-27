@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:keframa/components/app_bar.dart';
 import 'package:keframa/components/buttons.dart';
 import 'package:keframa/components/dummy.dart';
+import 'package:keframa/screens/home/assets/assets.dart';
 import 'package:keframa/theme/style.dart';
 
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.white70,
       appBar: MainAppBar(
         appBar: AppBar(),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Row(
@@ -34,7 +37,7 @@ class LandingPage extends StatelessWidget {
                       SizedBox(height: 20),
                       SizedBox(
                         width: 450,
-                        child: info,
+                        child: mainInfo,
                       ),
                       SizedBox(height: 20),
                       BoxedButton(
@@ -63,19 +66,65 @@ class LandingPage extends StatelessWidget {
                 )
               ],
             ),
+            SizedBox(
+              width: 920,
+              height: 40,
+            ),
+            Row(
+              children: [
+                Container(
+                  color: Colors.yellow[100],
+                  margin: EdgeInsets.only(left: 120),
+                  child: Column(
+                    children: [
+                      SizedBox(width: 450, child: dummy10Sentences),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 20),
+                Container(
+                  color: Colors.red[100],
+                  margin: EdgeInsets.only(right: 120),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      SizedBox(width: 450, child: dummy10Sentences),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: 920,
+              height: 40,
+            ),
+            Row(
+              children: [
+                Container(
+                  color: Colors.blue[100],
+                  margin: EdgeInsets.only(left: 120),
+                  child: Column(
+                    children: [
+                      SizedBox(width: 450, child: dummy10Sentences),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 20),
+                Container(
+                  color: Colors.pink[100],
+                  margin: EdgeInsets.only(right: 120),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      SizedBox(width: 450, child: dummy10Sentences),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-final mainIntro = Text(
-  "Today you've supported a child's education",
-  style: headerStyle,
-);
-
-final info = Text(
-  "A dedicated team of 56 cyclists are travelling 325 miles over 5 days in aid of the Keframa School Build. By supporting our cause, you have given a young adult in Northern Uganda a chance to thrive.",
-  style: textBodyStyle,
-);
