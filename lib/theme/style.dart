@@ -8,7 +8,7 @@ final headerStyle = TextStyle(
 );
 
 final mainTitle = TextStyle(
-  color: Colors.black,
+  color: Colors.black87,
   fontFamily: 'Overpass',
   fontSize: 18,
   fontWeight: FontWeight.w400,
@@ -43,7 +43,7 @@ final appBarTextStyle = TextStyle(
 );
 
 final simpleAppBarTextStyle = TextStyle(
-  color: Colors.black,
+  color: Colors.black87,
   fontFamily: 'Overpass',
   fontSize: 14,
   fontWeight: FontWeight.w100,
