@@ -72,8 +72,8 @@ class LandingPage extends StatelessWidget {
             ),
             Row(
               children: [
+                // left box
                 Container(
-                  color: Colors.yellow[100],
                   margin: EdgeInsets.only(left: 120),
                   child: Column(
                     children: [
@@ -82,13 +82,16 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 20),
+                // right box
                 Container(
-                  color: Colors.red[100],
                   margin: EdgeInsets.only(right: 120),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      SizedBox(width: 450, child: dummy10Sentences),
+                      SizedBox(
+                        width: 450,
+                        child: Image.asset('assets/groupCycling.jpg'),
+                      ),
                     ],
                   ),
                 ),
@@ -100,27 +103,34 @@ class LandingPage extends StatelessWidget {
             ),
             Row(
               children: [
+                // left box
                 Container(
-                  color: Colors.blue[100],
                   margin: EdgeInsets.only(left: 120),
                   child: Column(
                     children: [
-                      SizedBox(width: 450, child: dummy10Sentences),
+                      SizedBox(
+                        width: 450,
+                        child: Image.asset('assets/handlebars.jpg'),
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(width: 20),
+                // right box
                 Container(
-                  color: Colors.pink[100],
                   margin: EdgeInsets.only(right: 120),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      SizedBox(width: 450, child: dummy10Sentences),
+                      SizedBox(width: 450, child: dummySubtitleLargeRightAlign),
                     ],
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              width: 920,
+              height: 40,
             ),
           ],
         ),

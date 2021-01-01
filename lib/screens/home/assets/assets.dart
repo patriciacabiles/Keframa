@@ -10,3 +10,9 @@ final mainInfo = Text(
   "A dedicated team of 56 cyclists are travelling 325 miles over 5 days in aid of the Keframa School Build. By supporting our cause, you have given a young adult in Northern Uganda a chance to thrive.",
   style: textBodyStyle,
 );
+
+final dummySubtitleLargeRightAlign = Text(
+  "Risus, egestas odio egestas sit enim diam tristique a tellus.",
+  textAlign: TextAlign.end,
+  style: subheadingBlack,
+);

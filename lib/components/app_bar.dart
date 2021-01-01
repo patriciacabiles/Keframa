@@ -28,7 +28,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           label: 'The Team',
           route: '/team',
         ),
-        SimpleTextOnlyButton(label: 'Sign In', route: '/login'),
+        SimpleTextOnlyButton(label: 'Admin', route: '/admin'),
       ],
     );
   }

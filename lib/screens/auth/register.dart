@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:keframa/services/auth.dart';
 import 'package:keframa/components/loading.dart';
+import 'package:keframa/theme/style.dart';
 
 class Register extends StatefulWidget {
   // Constructor
@@ -30,9 +31,13 @@ class _RegisterState extends State<Register> {
         : Scaffold(
             backgroundColor: Colors.white70,
             appBar: AppBar(
-              backgroundColor: Colors.blue[800],
+              iconTheme: IconThemeData(color: Colors.black87),
+              backgroundColor: Colors.white,
               elevation: 2.0,
-              title: Text('Keframa School Build: London to Amsterdam 2021'),
+              title: Text(
+                'Keframa School Build: London to Amsterdam 2021',
+                style: appBarTextStyle,
+              ),
             ),
             body: Container(
               // TODO: put this in a row .. use better layout!!
@@ -44,7 +49,7 @@ class _RegisterState extends State<Register> {
                     Center(
                       child: Text(
                         'Register',
-                        style: TextStyle(fontSize: 30),
+                        style: headerStyle,
                       ),
                     ),
                     SizedBox(height: 20.0),
@@ -99,7 +104,6 @@ class _RegisterState extends State<Register> {
                         }
                       },
                     ),
-
                     SizedBox(height: 20),
                     Center(
                       child: Text(

@@ -21,6 +21,13 @@ final subheadingLightBlueStyle = TextStyle(
   fontWeight: FontWeight.w200,
 );
 
+final subheadingBlack = TextStyle(
+  color: Colors.black87,
+  fontFamily: 'Overpass',
+  fontSize: 20,
+  fontWeight: FontWeight.w200,
+);
+
 final textBodyStyle = TextStyle(
   color: Colors.black87,
   fontFamily: 'Overpass',
