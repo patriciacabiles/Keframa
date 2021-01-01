@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
 import 'package:flutter/material.dart';
 import 'package:keframa/theme/style.dart';
 import 'package:keframa/services/auth.dart';
@@ -13,6 +14,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  fbAuth.User user;
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
@@ -106,6 +108,43 @@ class _LoginState extends State<Login> {
                       },
                     ),
                     SizedBox(height: 20),
+                    OutlineButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(45)),
+                      splashColor: Colors.grey,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Image(
+                                image: AssetImage('assets/googleLogo.jpg'),
+                                height: 5),
+                            Padding(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                'Sign in with Google',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 15),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      onPressed: () async {
+                        _auth.signInGoogle().then((result) {
+                          if (result == null) {
+                            setState(() {
+                              error =
+                                  'Oops! Could not login with those credentials.';
+                              loading = false;
+                            });
+                          }
+                          Navigator.pushReplacementNamed(context, '/admin');
+                        });
+                      },
+                    ),
                     Center(
                       child: Text(
                         'Or',

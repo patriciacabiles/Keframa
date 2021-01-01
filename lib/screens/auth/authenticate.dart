@@ -15,10 +15,10 @@ class _AuthenticateState extends State<Authenticate> {
 
   @override
   Widget build(BuildContext context) {
-    // default is to show the Register button.. otherwise Log in
+    // default is to show the Login button.. otherwise Register
     if (showSignIn) {
-      return Login(toggleView: toggleView);
+      return Register(toggleView: toggleView);
     }
-    return Register(toggleView: toggleView);
+    return Login(toggleView: toggleView);
   }
 }

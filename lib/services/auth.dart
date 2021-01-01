@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
 import 'package:keframa/models/user.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
   final fbAuth.FirebaseAuth _auth = fbAuth.FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   // create User object based on FirebaseUser
   User _userFromFirebaseUser(fbAuth.User fbUser) {
@@ -54,6 +56,47 @@ class AuthService {
           email: email, password: password);
       fbAuth.User user = creds.user;
       return _userFromFirebaseUser(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
+
+  Future<fbAuth.User> signInGoogle() async {
+    try {
+      GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
+      GoogleSignInAuthentication googleAuth =
+          await googleSignInAccount.authentication;
+
+      final fbAuth.AuthCredential creds = fbAuth.GoogleAuthProvider.credential(
+          idToken: googleAuth.idToken, accessToken: googleAuth.accessToken);
+
+      fbAuth.UserCredential authresult =
+          await _auth.signInWithCredential(creds);
+      fbAuth.User user = authresult.user;
+
+      //check if user has real account
+      // assert(!user.isAnonymous);
+      // assert(await user.getIdToken() != null);
+
+      // // make sure that this is same user that we signed in with
+      // final fbAuth.User currentUser = _auth.currentUser;
+      // assert(currentUser.uid == user.uid);
+
+      return user;
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
+
+  // Google Sign out
+
+  Future<void> signOutGoogle() async {
+    try {
+      await _googleSignIn.signOut();
+      print("User signed out of Google");
+      return await _auth.signOut();
     } catch (e) {
       print(e.toString());
       return null;
