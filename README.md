@@ -20,12 +20,12 @@ Currently running as a Web App so using Flutter beta, for web.
 
 [ ] API?
 
-[ ] Geolocation Map
+[x] Geolocation Map - _need to add ability to pin location + add info, on hover_
 
 [x] Sign In page for admins
 
 [ ] User driven addition of photos/location
 
-[ ] Donate/Support Button
+[x] Donate/Support Button - _connect to justGiving pages_
 
-[ ] About/Contact Page
+[x] About/Contact Page - _layout done, add real info_
