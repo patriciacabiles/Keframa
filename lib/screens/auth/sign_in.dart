@@ -4,6 +4,9 @@ import 'package:keframa/theme/style.dart';
 import 'package:keframa/services/auth.dart';
 import 'package:keframa/components/loading.dart';
 
+// todo: change the log in so it automatically prompts you to sign in with google .. only certain Gaccounts should be able to access this;
+// work out how to restrict access ti specific Google accounts.
+// change this to a card...
 class Login extends StatefulWidget {
   // Constructor for widget
   final Function toggleView;
@@ -108,6 +111,12 @@ class _LoginState extends State<Login> {
                       },
                     ),
                     SizedBox(height: 20),
+                    Center(
+                      child: Text(
+                        'Or',
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ),
                     OutlineButton(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45)),
@@ -145,19 +154,19 @@ class _LoginState extends State<Login> {
                         });
                       },
                     ),
-                    Center(
-                      child: Text(
-                        'Or',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ),
+                    // Center(
+                    //   child: Text(
+                    //     'Or',
+                    //     style: TextStyle(fontSize: 15),
+                    //   ),
+                    // ),
                     SizedBox(height: 20),
-                    TextButton(
-                      child: Text('Register'),
-                      onPressed: () {
-                        widget.toggleView();
-                      },
-                    )
+                    // TextButton(
+                    //   child: Text('Register'),
+                    //   onPressed: () {
+                    //     widget.toggleView();
+                    //   },
+                    // )
                   ],
                 ),
               ),

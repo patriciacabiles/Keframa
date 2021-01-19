@@ -16,7 +16,7 @@ class TextOnlyButton extends StatelessWidget {
     return FlatButton(
       child: Text(label, style: appBarTextStyle),
       hoverColor: Colors.lightBlue[50],
-      splashColor: Colors.orangeAccent[700],
+      splashColor: Colors.lightGreen[200],
       onPressed: () {
         Navigator.pushReplacementNamed(context, route);
       },
