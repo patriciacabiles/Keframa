@@ -10,6 +10,8 @@ Currently running as a Web App so using Flutter beta, for web.
 
 ` flutter run -d Chrome ` or  `flutter run`, then pick your chosen web server
 
+OR `make run` - specifies port to be used for google maps api
+
 #
 
 ## To Dos:
